@@ -1,4 +1,4 @@
-# BengaluruKereAtlas
+# Bengaluru Kere Atlas
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24117384.svg)](https://doi.org/10.5281/zenodo.24117384)
 ![Status](https://img.shields.io/badge/Status-Live-1f6f78)
@@ -22,10 +22,9 @@ each new report is published.
 ## What the project does
 
 KSPCB samples Bengaluru's lakes every month, but the results are published as PDF tables
-whose layouts keep changing. That makes
-it hard to see how one lake has changed, how one lake compares with another, or how the
-city as a whole is doing. This project turns those reports into something people can read,
-question and check.
+whose layouts keep changing. That makes it hard to see how one lake has changed, how one 
+lake compares with another, or how the city as a whole is doing. This project turns 
+those reports into something people can read, question and check.
 
 **It builds one dataset from the reports.** Every monthly report is read into a single
 station-by-month record. Station names are matched to a lake registry with coordinates,
