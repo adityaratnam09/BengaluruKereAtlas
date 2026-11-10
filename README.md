@@ -12,112 +12,73 @@
 
 ## Overview
 
-> **Urban Lake Water Quality in Bengaluru: A Data-Driven Typology**
-
-The Karnataka State Pollution Control Board (KSPCB) publishes monthly water-quality
-measurements for Bengaluru's lakes as PDF reports whose layouts change from month to
-month, which makes it hard to compare one lake with another or one month with the next.
-Bengaluru Kere Atlas ("kere" is the Kannada word for lake) turns those reports into an
-interactive atlas of 150+ lakes, built from monthly KSPCB reports back to July 2023 and
-updated as each new report is published.
-
-The analysis behind it finds one dominant oxygen-depletion gradient across the lakes:
-lower dissolved oxygen occurs alongside higher oxygen demand, ammoniacal nitrogen,
-nutrients, dissolved ions and fecal contamination. The accompanying paper describes the
-typology, its uncertainty and the data-quality audit for the record available when it was written.
+Bengaluru Kere Atlas ("kere" is the Kannada word for lake) is an interactive atlas of
+water quality in 150+ Bengaluru lakes. It is built from the monthly reports of the
+Karnataka State Pollution Control Board (KSPCB), from July 2023 onward, and is updated as
+each new report is published.
 
 ---
 
-## What the atlas does
+## What the project does
 
-Bengaluru Kere Atlas is one self-contained web page with seven sections. It runs entirely
-in the browser, with no server of its own and no account to create. Everything shown is drawn
-from the harmonized KSPCB record, and every chart says what it can and cannot show.
+KSPCB samples Bengaluru's lakes every month, but the results are published as PDF tables
+whose layouts keep changing. That makes it hard to see how one lake has changed, how one 
+lake compares with another, or how the city as a whole is doing. This project turns 
+those reports into something people can read, question and check.
 
-### Explore: find a lake and read its water
+**It builds one dataset from the reports.** Every monthly report is read into a single
+station-by-month record. Station names are matched to a lake registry with coordinates,
+and the values as reported are kept next to the standardized ones, so every number can be
+traced back to its source report.
 
-- **Interactive map** of KSPCB-monitored lakes, with search and a full lake list. Markers
-  can be coloured by CPCB designated-best-use class (A to E) or by the **Lake Pressure
-  Index**, with a minimum-score filter, and the map can show all lakes or only lakes that
-  have no KSPCB reading.
-- **Satellite compare**: a side-by-side slider between two dated satellite releases from
-  Esri's World Imagery Wayback archive, both chosen from the monsoon season so the
-  comparison is not distorted by dry-season versus wet-season differences.
-- **Follow a drop of water**: an animated walk down the documented Hebbal-Nagavara cascade
-  of seven connected lakes, from Kattigenahalli Lake to Yelemallappa Shetty Lake, with the
-  latest KSPCB readings at each monitored stop. The paths are schematic, and the readings
-  are individual lake measurements, not measurements of water flowing between lakes.
-- **Plain-language explainers** for the CPCB Class A to E thresholds and for how the Lake
-  Pressure Index combines three pressure dimensions into one screening score.
-- **Lakes watched**: star lakes from their profile to keep a shortlist on the home page,
-  saved in your own browser only.
+**It checks the data and says where it doubts it.** Each reading is compared with the
+lake's own history, with the citywide distribution, with related measurements that should
+move together, and with the conditions a reported CPCB class implies. Readings that look
+wrong are flagged with a reason and a confidence level. They are never silently removed or
+corrected.
 
-### Dashboard: the citywide picture
+**It summarizes the whole city.** Citywide trends, monitoring coverage and rankings show
+which lakes are worst off on dissolved oxygen, organic pollution, nutrients, fecal
+contamination, dissolved solids and metals. A **Lake Pressure Index** combines three
+pressure dimensions into one screening score so lakes can be compared at a glance. Results
+are set against CPCB best-use classes and BIS and IS 10500 reference limits.
 
-- Headline figures: the share of samples with dissolved oxygen below the 4 mg/L hypoxia
-  threshold, citywide median BOD against the CPCB outdoor-bathing limit, and the share of
-  lakes exceeding the BIS limit for total dissolved solids.
-- **Chemistry over time**: citywide monthly medians, plus monitoring coverage by month so
-  changes in sampling effort are visible.
-- **Lake Pressure Index views**: the citywide picture, latest scores compared, and
-  historical pressure and variability.
-- **Leaderboards and distributions**: dissolved oxygen best and worst off, lakes with the
-  highest median BOD, the cloudiest lakes (turbidity), chronic hypoxia (share of months
-  below 4 mg/L), COD:BOD ratio, fecal coliform, ammoniacal nitrogen versus nitrate, total
-  dissolved solids across lakes, pH against the CPCB Class D band, irrigation suitability
-  (sodium adsorption ratio), and heavy metals against IS 10500 reference limits.
+**It lets you look closely at one lake.** Each lake has a map location, a latest reading,
+its full monthly history, its flagged readings, and a satellite comparison between two
+dated images. A guided trace follows the documented Hebbal-Nagavara cascade of connected
+lakes from upstream to downstream.
 
-### Lake Profile: one lake, every reading on file
+**It looks for patterns across lakes and seasons.** Wetter and drier months are compared
+lake by lake and citywide, and any two curated parameters can be plotted against each other
+to see which pollution signals travel together.
 
-Pick any lake to see its full monthly history next to its latest snapshot from Explore,
-and any suspected data errors recorded for it.
+**It connects the numbers to people and places.** Visitors can log field observations from
+a lake walk, try simulated low-cost field tools, test their local knowledge with a game
+and a quiz, and read how Bengaluru's lake network grew, fragmented and was encroached on.
 
-### Analyze: seasons and relationships
+The data refreshes as each new KSPCB report is published.
 
-- **Seasonal**: how pollution moves through the calendar. It compares wetter (June to
-  December) and drier (January to May) months for dissolved oxygen, BOD, TDS, turbidity,
-  hardness, nitrate and phosphate, and shows the recurring pre-monsoon oxygen low point.
-- **Correlate**: plot any two of 21 curated water-quality parameters against each other,
-  one dot per lake, using either each lake's latest reading or its average over its full monitoring history. Also
-  includes a pooled correlation view across all monthly samples, a dissolved-oxygen versus
-  BOD quadrant that separates lakes under stress from healthier ones, and a nitrate versus
-  phosphate quadrant for nutrient enrichment.
+### Sections of the atlas
 
-### Play: learn the lakes
+| Section | What it is for |
+| --- | --- |
+| **Explore** | Map, search, satellite compare, Lake Pressure Index and the downstream cascade trace |
+| **Dashboard** | Citywide chemistry over time, coverage, rankings and distributions |
+| **Lake Profile** | One lake's full monthly history, latest reading and flagged readings |
+| **Analyze** | Seasonal comparison and parameter-against-parameter correlations |
+| **Play** | Guess the Lake and a lake-literacy quiz |
+| **Verify** | Citywide table of suspected data errors, and a field-notes log |
+| **About** | The story of the lakes, background, chemistry notes, sources and methods |
 
-**Guess the Lake** tests local knowledge of Bengaluru's lakes, and a **Quiz** tests lake
-literacy.
-
-### Verify: check the evidence
-
-- **Data Errors**: a citywide, sortable table of suspected reporting errors in the KSPCB
-  data, found by comparing each lake's own history, citywide distributions, related
-  measurements and necessary conditions for reported Class D. Each flag carries a
-  confidence level and a reason. Flagged readings are never silently removed.
-- **Field Notes**: a log for volunteers standing at a lake with a test strip and a phone.
-  Date, lake and notes are required; temperature, pH, dissolved oxygen, TDS, hardness and
-  Secchi depth are optional. Entries stay in your browser and can be sorted or cleared.
-  Alongside it, simulated sliders show what low-cost field tools (pH strip, TDS pen,
-  hardness strip, Secchi disk, dissolved-oxygen kit, thermometer) would read, with
-  indicative prices in rupees.
-
-### About: context and method
-
-The story of Bengaluru's lake network and how it was lost to encroachment, with figures
-drawn from published sources rather than calculated here; a Chemistry Lens page; and full
-sources, methods and limitations. The page also has a dark mode and a phone-sized
-preview.
-
-### Built-in safeguards
+### Principles
 
 - Suspect readings are flagged and explained, not deleted.
-- Charts state what they measure and what they do not, for example that turbidity is not
-  pollution and that seasonal patterns are associations, not causes.
-- Regulatory thresholds (CPCB classes, BIS and IS 10500 limits) are shown as fixed
-  references, separate from statistical patterns.
-- A lake with no matching KSPCB record is marked as unmonitored, never as clean or
-  polluted.
-- Data refreshes monthly as KSPCB publishes new reports.
+- Each chart states what it measures and what it does not. Seasonal patterns are shown as
+  associations, not causes, and turbidity is not treated as pollution.
+- Regulatory thresholds are shown as fixed references, separate from statistical patterns.
+- A lake with no matching KSPCB record is marked as unmonitored, never as clean or polluted.
+- Field notes stay in the visitor's own browser. The atlas has no server of its own and
+  needs no account.
 
 ---
 
