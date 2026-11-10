@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Bengaluru Kere Atlas"
+type: software
+abstract: >-
+  An interactive atlas of water quality in Bengaluru's lakes, built from the monthly
+  reports of the Karnataka State Pollution Control Board (KSPCB). It provides lake
+  profiles, a Lake Pressure Index, seasonal comparison, satellite comparison and a
+  citywide table of flagged data errors.
+authors:
+  - family-names: "Ratnam"
+    given-names: "Aditya Rajiv"
+    orcid: "https://orcid.org/0009-0008-8354-1756"
+url: "https://adityaratnam09.github.io/BengaluruKereAtlas/"
+repository-code: "https://github.com/adityaratnam09/BengaluruKereAtlas"
+keywords:
+  - Bengaluru
+  - lakes
+  - water quality
+  - KSPCB
+  - environmental data
+  - data visualization

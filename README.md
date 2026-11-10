@@ -1,6 +1,6 @@
 # BengaluruKereAtlas
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24117384.svg)](https://doi.org/10.5281/zenodo.24117384)
 ![Status](https://img.shields.io/badge/Status-Live-1f6f78)
 ![License](https://img.shields.io/badge/License-All%20rights%20reserved-lightgrey)
 
@@ -22,9 +22,10 @@ each new report is published.
 ## What the project does
 
 KSPCB samples Bengaluru's lakes every month, but the results are published as PDF tables
-whose layouts keep changing. That makes it hard to see how one lake has changed, how one 
-lake compares with another, or how the city as a whole is doing. This project turns 
-those reports into something people can read, question and check.
+whose layouts keep changing. That makes
+it hard to see how one lake has changed, how one lake compares with another, or how the
+city as a whole is doing. This project turns those reports into something people can read,
+question and check.
 
 **It builds one dataset from the reports.** Every monthly report is read into a single
 station-by-month record. Station names are matched to a lake registry with coordinates,
@@ -135,11 +136,19 @@ BengaluruKereAtlas/
 ├── index.html      # the atlas: one self-contained page, served by GitHub Pages
 ├── README.md
 ├── LICENSE
+├── CITATION.cff
+├── .zenodo.json
 └── screenshots/
 ```
 
 The data-extraction and analysis code is not published here. It is available from the
 author on reasonable request.
+
+---
+
+## Author
+
+Aditya Rajiv Ratnam. ORCID: [0009-0008-8354-1756](https://orcid.org/0009-0008-8354-1756)
 
 ---
 
@@ -157,7 +166,9 @@ KSPCB reports are public documents of the Karnataka State Pollution Control Boar
 ```text
 Ratnam, A. R. (2026).
 
-Bengaluru Kere Atlas [Web application].
+Bengaluru Kere Atlas [Web application]. Zenodo.
+
+https://doi.org/10.5281/zenodo.24117384
 
 https://adityaratnam09.github.io/BengaluruKereAtlas/
 ```
@@ -171,5 +182,5 @@ Urban Lake Water Quality in Bengaluru: A Data-Driven Typology.
 
 Zenodo.
 
-https://doi.org/10.5281/zenodo.XXXXXXX
+https://doi.org/10.5281/zenodo.PAPER_DOI_TO_BE_ADDED
 ```
