@@ -18,13 +18,13 @@ The Karnataka State Pollution Control Board (KSPCB) publishes monthly water-qual
 measurements for Bengaluru's lakes as PDF reports whose layouts change from month to
 month, which makes it hard to compare one lake with another or one month with the next.
 Bengaluru Kere Atlas ("kere" is the Kannada word for lake) turns those reports into an
-interactive atlas: 36 monthly reports from July 2023 to July 2026, covering 4,306
-observations from 152 monitoring stations.
+interactive atlas of 150+ lakes, built from monthly KSPCB reports back to July 2023 and
+updated as each new report is published.
 
 The analysis behind it finds one dominant oxygen-depletion gradient across the lakes:
 lower dissolved oxygen occurs alongside higher oxygen demand, ammoniacal nitrogen,
 nutrients, dissolved ions and fecal contamination. The accompanying paper describes the
-typology, its uncertainty and the data-quality audit.
+typology, its uncertainty and the data-quality audit for the record available when it was written.
 
 ---
 
@@ -78,7 +78,7 @@ and any suspected data errors recorded for it.
   December) and drier (January to May) months for dissolved oxygen, BOD, TDS, turbidity,
   hardness, nitrate and phosphate, and shows the recurring pre-monsoon oxygen low point.
 - **Correlate**: plot any two of 21 curated water-quality parameters against each other,
-  one dot per lake, using either each lake's latest reading or its 36-month average. Also
+  one dot per lake, using either each lake's latest reading or its average over its full monitoring history. Also
   includes a pooled correlation view across all monthly samples, a dissolved-oxygen versus
   BOD quadrant that separates lakes under stress from healthier ones, and a nitrate versus
   phosphate quadrant for nutrient enrichment.
