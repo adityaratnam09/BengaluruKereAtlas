@@ -9,5 +9,6 @@
     }
   ],
   "keywords": ["Bengaluru", "lakes", "water quality", "KSPCB", "environmental data", "data visualization"],
-  "access_right": "closed"
+  "access_right": "open",
+  "license": "other-closed"
 }
